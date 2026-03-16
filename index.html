@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+    background-color: #f8f5f2; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #8c766d; 
+    margin: 0;
+    padding: 20px;
+}
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        border-bottom: 1px solid #dcd3cc;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-family: 'Georgia', serif;
+        font-size: 24px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #8c766d;
+        margin-left: 30px;
+        font-size: 18px;
+        font-family: 'Georgia', serif;
+    }
+
+    .form-wrapper {
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .main-form-container {
+        border: 2px solid #8e7a3f;
+        border-radius: 25px;
+        padding: 30px;
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wide-field {
+        grid-column: span 2;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    input, select {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: white;
+        color: #bcaaa4;
+        font-size: 14px;
+    }
+
+    .gender-group {
+        display: flex;
+        background-color: white;
+        border-radius: 8px;
+        padding: 5px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .gender-option {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    .checkboxes{
+        font-size: 10px;
+        font-style: italic;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #93817a; 
+        color: white;
+        border: none;
+        padding: 12px 50px;
+        border-radius: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://media.istockphoto.com/id/1304408169/vector/lotus-icon-vector-logo-template-in-trendy-flat-design.jpg?s=612x612&w=0&k=20&c=KIS5i8OrUdUxPIWmmT4_aWbQTxUT19LpDkpfTLBK21M=" alt="Lotus Logo" width="40"> <span>Lotus University Malaysia</span>
+        </div>
+    </header>
+
+    <div class="form-wrapper">
+        <h1>Workshop registration</h1>
+
+        <form class="main-form-container" action="process.php" method="POST">
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first_name" id="first-name" placeholder="Enter First Name">
+            </div>
+
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last_name" id="last-name" placeholder="Enter Last Name">
+            </div>
+
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="Enter your Age">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email">
+            </div>
+
+            <div class="input-group">
+                <label for="course selecgtion">Course</label>
+                <select name="course" id="course-selection">
+                    <option value="">Select a Course</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Business Studies">Business Studies</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Law">Law</option>
+                    <option value="Architecture">Architecture</option>
+                    </select>
+            </div>
+
+            <div class="input-group">
+                <label for="gender">Gender</label>
+                <div class="gender-group">
+                    <div class="gender-option">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+        <div class = "checkboxes">
+            <label for="hobbies">Please select your hobbies</label> <br>
+            <label for = "hobbies" style="color: burlywood;"><input type="checkbox" name = "hobbies[]" id = "hobbies"> Reading</label> <br>
+            <label for = "hobbies" style="color: burlywood;"><input type="checkbox" name = "hobbies[]" id = "hobbies"> Sports</label> <br>
+            <label for = "hobbies" style="color: burlywood;"><input type="checkbox" name = "hobbies[]" id = "hobbies"> Music</label> <br>
+            <label for = "hobbies" style="color: burlywood;"><input type="checkbox" name = "hobbies[]" id = "hobbies"> Technology</label> <br>
+
+        </div>
+
+        <div class="submit-container">
+            <button type="submit" class="submit-btn" name="submit"> Submit </button>
+        </div>
+    </form>
+
+
+
+    </div>
+
+</body>
+</html>
